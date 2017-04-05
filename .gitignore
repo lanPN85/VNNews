@@ -1,0 +1,6 @@
+/files/*
+/VNNews/spiders/*.pyc
+/VNNews/*.pyc
+/VNNews/spiders/*.py~
+/VNNews/*.py~
+/.idea/
