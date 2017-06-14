@@ -45,7 +45,7 @@ class TxtPipeline(object):
     def process_item(self, item, spider):
         if item['content'] != '':
             self.fn.write('\n'.encode('utf-8').join([item['title'], item['intro'], item['content'], '***\n'.encode('utf-8')]))
-        spider.log('Saved to %s [%d]' % (self.fn, item.count))
+        spider.log('Saved to %s [%d]' % (spider.filename, item.count))
         return item
 
     def close_spider(self, spider):
