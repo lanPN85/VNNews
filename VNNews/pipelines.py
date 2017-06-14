@@ -2,7 +2,7 @@
 import mysql.connector as connector
 
 
-class DBPipeline(object):
+class MySQLPipeline(object):
     def __init__(self):
         self.username = 'lanpn'
         self.password = 'serenity'
