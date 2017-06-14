@@ -10,6 +10,7 @@ import scrapy
 
 class Article(scrapy.Item):
     url = scrapy.Field()
+    count = scrapy.Field()
     referer = scrapy.Field()
     title = scrapy.Field()
     intro = scrapy.Field()

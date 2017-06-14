@@ -26,6 +26,7 @@ class TemplateSpider(scrapy.Spider):
         title, intro, content = ' '.join(title).strip(), ' '.join(intro).strip(), ' '.join(content).strip()
         url = response.url
         referer = response.request.headers.get('Referer', None)
+        self.crawl_count += 1
         article = Article(title=title.encode('utf-8'), intro=intro.encode('utf-8'), content=content.encode('utf-8'),
-                          url=url, referer=referer, domain=self.allowed_domains[0])
+                          url=url, referer=referer, domain=self.allowed_domains[0], count=self.crawl_count)
         return article
