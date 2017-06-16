@@ -4,7 +4,7 @@ try:
 except ImportError:
     pass
 
-from TemplateSpider import TemplateSpider
+from spiders.TemplateSpider import TemplateSpider
 
 
 class MySQLPipeline(object):
