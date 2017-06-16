@@ -15,7 +15,7 @@ SPIDER_MODULES = ['VNNews.spiders']
 NEWSPIDER_MODULE = 'VNNews.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-# USER_AGENT = 'VNNews (+http://www.yourdomain.com)'
+USER_AGENT = 'LanPN (lanpn@vng.com.vn)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True

@@ -12,7 +12,7 @@ limit = {
     'vov': 20,
     'vtv': 20,
     'btt': 20,
-    'ttvh': 5,  #
+    'ttvh': 5,
     'gdn': 20,
     'ktn': 20,
     'ndh': 2,
