@@ -9,6 +9,7 @@ import base64
 
 from proxylist import ProxyList
 from scrapy import signals
+from proxy import proxies
 
 
 class VnnewsSpiderMiddleware(object):
@@ -62,14 +63,9 @@ class VnnewsSpiderMiddleware(object):
 class ProxyMiddleware(object):
     pl = ProxyList()
     prefix = 'http://'
-    list = [
-        '118.151.209.114:80',
-        '103.247.101.102:8080',
-        '201.249.61.161:8080'
-    ]
 
     def __init__(self):
-        self.pl.load_list(self.list)
+        self.pl.load_list(proxies)
 
     def process_request(self, request, spider):
         # Pick random proxy
