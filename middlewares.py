@@ -55,27 +55,3 @@ class VnnewsSpiderMiddleware(object):
 
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
-
-
-class ProxyMiddleware(object):
-    pl = ProxyList()
-    prefix = 'http://'
-    list = [
-        '118.151.209.114:80',
-        '103.247.101.102:8080',
-        '201.249.61.161:8080'
-    ]
-
-    def __init__(self):
-        self.pl.load_list(self.list)
-
-    def process_request(self, request, spider):
-        # Pick random proxy
-        address = self.prefix + self.pl.random.address()
-        # Set the location of the proxy
-        request.meta['proxy'] = address
-        # Use the following lines if your proxy requires authentication
-        # proxy_user_pass = "USERNAME:PASSWORD"
-        # setup basic authentication for the proxy
-        # encoded_user_pass = base64.encodestring(proxy_user_pass)
-        # request.headers['Proxy-Authorization'] = 'Basic ' + encoded_user_pass
