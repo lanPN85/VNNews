@@ -67,7 +67,6 @@ class ProxyMiddleware(object):
     ]
 
     def __init__(self):
-        # self.pl.load_file('proxy/list.txt')
         self.pl.load_list(self.list)
 
     def process_request(self, request, spider):
