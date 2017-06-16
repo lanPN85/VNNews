@@ -11,6 +11,7 @@ class TemplateSpider(scrapy.Spider):
     filename = None
     testing = False
     allowed_domains = ['//no domain']
+    directory = './'
 
     def __init__(self, name=None, **kwargs):
         super(TemplateSpider, self).__init__(name, **kwargs)

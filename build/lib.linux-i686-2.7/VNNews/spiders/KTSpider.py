@@ -7,7 +7,7 @@ from TemplateSpider import TemplateSpider
 class KTSpider(TemplateSpider):
     name = "ktn"
     allowed_domains = ["kienthuc.net.vn"]
-    filename = 'files/ktn.txt'
+    filename = 'ktn.txt'
     start_urls = [
         'http://kienthuc.net.vn/xa-hoi/?page=2',
         'http://kienthuc.net.vn/the-gioi/?page=2',

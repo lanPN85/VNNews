@@ -7,7 +7,7 @@ from TemplateSpider import TemplateSpider
 class VnPlusSpider(TemplateSpider):
     name = "vnplus"
     allowed_domains = ["www.vietnamplus.vn"]
-    filename = 'files/vnplus.txt'
+    filename = 'vnplus.txt'
     url_prefix = 'http://www.vietnamplus.vn/'
     page_suffix = '.vnp'
     start_urls = [

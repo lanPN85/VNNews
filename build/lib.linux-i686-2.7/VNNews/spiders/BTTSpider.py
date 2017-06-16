@@ -7,7 +7,7 @@ from TemplateSpider import TemplateSpider
 class BTTSpider(TemplateSpider):
     name = "btt"
     allowed_domains = ["baotintuc.vn"]
-    filename = 'files/btt.txt'
+    filename = 'btt.txt'
     start_urls = [
         'http://baotintuc.vn/thoi-su-472ct0/trang-2.htm',
         'http://baotintuc.vn/the-gioi-130ct0/trang-2.htm',

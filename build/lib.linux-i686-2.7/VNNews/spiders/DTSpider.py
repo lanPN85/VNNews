@@ -7,7 +7,7 @@ from TemplateSpider import TemplateSpider
 class DTSpider(TemplateSpider):
     name = "dantri"
     allowed_domains = ["dantri.com.vn"]
-    filename = 'files/dantri.txt'
+    filename = 'dantri.txt'
     start_urls = [
         'http://dantri.com.vn/su-kien/trang-2.htm',
         'http://dantri.com.vn/xa-hoi/trang-2.htm',

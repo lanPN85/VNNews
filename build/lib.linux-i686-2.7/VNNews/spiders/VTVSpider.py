@@ -7,7 +7,7 @@ from TemplateSpider import TemplateSpider
 class VTVSpider(TemplateSpider):
     name = "vtv"
     allowed_domains = ["vtv.vn"]
-    filename = 'files/vtv.txt'
+    filename = 'vtv.txt'
     page_suffix = '.htm'
     url_prefix = 'http://vtv.vn'
     start_urls = [

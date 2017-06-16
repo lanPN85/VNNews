@@ -8,7 +8,7 @@ class NDHSpider(TemplateSpider):
     testing = True
     name = "ndh"
     allowed_domains = ["ndh.vn"]
-    filename = 'files/ndh.txt'
+    filename = 'ndh.txt'
     start_urls = [
         'http://ndh.vn/Handler/Moredata.aspx?pageIndex=1&Cat_ID=4',  # Dau-tu
         'http://ndh.vn/Handler/Moredata.aspx?pageIndex=1&Cat_ID=6',  # Tieu-dung
