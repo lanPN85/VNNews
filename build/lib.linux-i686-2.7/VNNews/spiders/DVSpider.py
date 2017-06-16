@@ -7,7 +7,7 @@ from TemplateSpider import TemplateSpider
 class DVSpider(TemplateSpider):
     name = "danviet"
     allowed_domains = ["danviet.vn"]
-    filename = 'danviet.txt'
+    filename = 'files/danviet.txt'
     url_prefix = 'http://danviet.vn'
     start_urls = [
         'http://danviet.vn/ajax/box_bai_viet_trang_chuyen_muc/index/1007/1/8/1/0/1/0',  # The-gioi

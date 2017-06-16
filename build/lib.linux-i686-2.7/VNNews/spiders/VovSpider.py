@@ -7,7 +7,7 @@ from TemplateSpider import TemplateSpider
 class VovSpider(TemplateSpider):
     name = "vov"
     allowed_domains = ["vov.vn"]
-    filename = 'vov.txt'
+    filename = 'files/vov.txt'
     url_prefix = 'http://vov.vn'
     start_urls = [
         'http://vov.vn/chinh-tri/trang1',

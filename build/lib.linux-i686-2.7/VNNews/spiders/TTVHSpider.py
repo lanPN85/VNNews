@@ -7,7 +7,7 @@ from TemplateSpider import TemplateSpider
 class BTTSpider(TemplateSpider):
     name = "ttvh"
     allowed_domains = ["thethaovanhoa.vn"]
-    filename = 'ttvh.txt'
+    filename = 'files/ttvh.txt'
     start_urls = [
         'http://thethaovanhoa.vn/bong-da-trong-nuoc-128ct0/trang-2.htm',
         'http://thethaovanhoa.vn/tay-ban-nha-151ct0/trang-2.htm',

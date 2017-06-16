@@ -6,7 +6,7 @@ from TemplateSpider import TemplateSpider
 
 class VBSpider(TemplateSpider):
     name = "vietbao"
-    filename = 'vietbao.txt'
+    filename = 'files/vietbao.txt'
     page_suffix = '/'
     allowed_domains = ["vietbao.vn"]
     start_urls = [

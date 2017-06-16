@@ -5,6 +5,8 @@
 # See documentation in:
 # http://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
+import base64
+
 from proxylist import ProxyList
 from scrapy import signals
 
@@ -60,23 +62,17 @@ class VnnewsSpiderMiddleware(object):
 class ProxyMiddleware(object):
     pl = ProxyList()
     prefix = 'http://'
-    list = [
-        '118.151.209.114:80',
-        '103.247.101.102:8080',
-        '201.249.61.161:8080'
-    ]
 
     def __init__(self):
-        # self.pl.load_file('proxy/list.txt')
-        self.pl.load_list(self.list)
+        self.pl.load_file('proxy/list.txt')
 
     def process_request(self, request, spider):
         # Pick random proxy
-        address = self.prefix + self.pl.random.address()
+        address = self.prefix + self.pl.random().address()
         # Set the location of the proxy
         request.meta['proxy'] = address
         # Use the following lines if your proxy requires authentication
-        # proxy_user_pass = "USERNAME:PASSWORD"
+        proxy_user_pass = "USERNAME:PASSWORD"
         # setup basic authentication for the proxy
-        # encoded_user_pass = base64.encodestring(proxy_user_pass)
-        # request.headers['Proxy-Authorization'] = 'Basic ' + encoded_user_pass
+        encoded_user_pass = base64.encodestring(proxy_user_pass)
+        request.headers['Proxy-Authorization'] = 'Basic ' + encoded_user_pass

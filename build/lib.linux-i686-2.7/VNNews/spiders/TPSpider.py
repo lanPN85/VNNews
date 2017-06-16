@@ -7,7 +7,7 @@ from TemplateSpider import TemplateSpider
 class TPSpider(TemplateSpider):
     name = "tienphong"
     allowed_domains = ["tienphong.vn"]
-    filename = 'tienphong.txt'
+    filename = 'files/tienphong.txt'
 
     start_urls = [
         'http://www.tienphong.vn/xa-hoi/trang2',

@@ -8,7 +8,7 @@ class ExprSpider(TemplateSpider):
     name = "vnexpress"
     allowed_domains = ["vnexpress.net"]
     page_suffix = '.html'
-    filename = 'vnexpress.txt'
+    filename = 'files/vnexpress.txt'
     start_urls = [
         'http://vnexpress.net/tin-tuc/the-gioi/page/1.html',
         'http://kinhdoanh.vnexpress.net/page/1.html',

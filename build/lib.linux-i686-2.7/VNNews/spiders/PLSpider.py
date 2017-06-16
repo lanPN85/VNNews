@@ -7,7 +7,7 @@ from TemplateSpider import TemplateSpider
 class PLSpider(TemplateSpider):
     name = "pl"
     allowed_domains = ["plo.vn"]
-    filename = 'pl.txt'
+    filename = 'files/pl.txt'
     start_urls = [
         'http://plo.vn/thoi-su/?trang=2',
         'http://plo.vn/phap-luat/?trang=2',

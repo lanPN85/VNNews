@@ -9,7 +9,7 @@ class VNNSpider(TemplateSpider):
     allowed_domains = ["vietnamnet.vn"]
     page_suffix = '/index.html'
     url_prefix = 'http://vietnamnet.vn'
-    filename = 'vnn.txt'
+    filename = 'files/vnn.txt'
     start_urls = [
         'http://vietnamnet.vn/vn/thoi-su/trang1/index.html',
         'http://vietnamnet.vn/vn/kinh-doanh/trang1/index.html',

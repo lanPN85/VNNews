@@ -7,7 +7,7 @@ from TemplateSpider import TemplateSpider
 class GDSpider(TemplateSpider):
     name = "gdn"
     allowed_domains = ["giadinh.net.vn"]
-    filename = 'gdn.txt'
+    filename = 'files/gdn.txt'
     start_urls = [
         'http://giadinh.net.vn/xa-hoi/trang-2.htm',
         'http://giadinh.net.vn/gia-dinh/trang-2.htm',

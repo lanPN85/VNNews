@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 import mysql.connector as connector
 
-from TemplateSpider import TemplateSpider
-
 
 class MySQLPipeline(object):
     def __init__(self):
@@ -38,16 +36,16 @@ class MySQLPipeline(object):
 
 
 class TxtPipeline(object):
+    fn = None
 
     def open_spider(self, spider):
-        self.path = TemplateSpider.directory + spider.filename
-        self.fn = file(self.path, mode='wt',
+        self.fn = file(spider.filename, mode='wt',
                        buffering=1)
 
     def process_item(self, item, spider):
         if item['content'] != '':
             self.fn.write('\n'.encode('utf-8').join([item['title'], item['intro'], item['content'], '***\n'.encode('utf-8')]))
-        spider.log('Saved to %s [%d]' % (self.path, item.count))
+        spider.log('Saved to %s [%d]' % (spider.filename, item.count))
         return item
 
     def close_spider(self, spider):

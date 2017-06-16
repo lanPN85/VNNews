@@ -9,7 +9,7 @@ class K14Spider(TemplateSpider):
     allowed_domains = ["kenh14.vn"]
     url_prefix = 'http://kenh14.vn'
     page_prefix = 'http://kenh14.vn/timeline/laytinmoitronglist-'
-    filename = 'k14.txt'
+    filename = 'files/k14.txt'
     start_urls = [
         'http://kenh14.vn/timeline/laytinmoitronglist-1-2-1-1-1-1-4-0-3-1.chn',  # Doi-song
         'http://kenh14.vn/timeline/laytinmoitronglist-1-2-1-1-1-1-118-0-3-1.chn',  # The-thao
