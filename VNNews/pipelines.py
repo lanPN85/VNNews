@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
-import mysql.connector as connector
+try:
+    import mysql.connector as connector
+except ImportError:
+    pass
 
 from TemplateSpider import TemplateSpider
 
