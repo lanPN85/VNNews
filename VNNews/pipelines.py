@@ -30,7 +30,7 @@ class MySQLPipeline(object):
             cursor = self.conn.cursor()
             cursor.execute(query)
             self.conn.commit()
-            spider.log('Committed to MySQL [%d]' % item.count)
+            spider.log('Committed to MySQL [%d]' % item['count'])
         except connector.Error as err:
             self.conn.rollback()
             spider.log(err)
@@ -50,7 +50,7 @@ class TxtPipeline(object):
     def process_item(self, item, spider):
         if item['content'] != '':
             self.fn.write('\n'.encode('utf-8').join([item['title'], item['intro'], item['content'], '***\n'.encode('utf-8')]))
-        spider.log('Saved to %s [%d]' % (self.path, item.count))
+        spider.log('Saved to %s [%d]' % (self.path, item['count']))
         return item
 
     def close_spider(self, spider):
