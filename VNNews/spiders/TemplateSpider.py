@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import scrapy
 
-import crawl_limit
+from VNNews import crawl_limit
 from VNNews.items import Article
 
 
@@ -18,10 +18,10 @@ class TemplateSpider(scrapy.Spider):
         self.page_limit = crawl_limit.limit.get(self.name, 1)
 
     def parse(self, response):
-        raise NotImplementedError
+        raise NotImplementedError()
 
     def parse_content(self, response):
-        raise NotImplementedError
+        raise NotImplementedError()
 
     def get_item(self, title, intro, content, response):
         title, intro, content = ' '.join(title).strip(), ' '.join(intro).strip(), ' '.join(content).strip()
