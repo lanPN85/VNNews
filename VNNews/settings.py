@@ -66,7 +66,7 @@ DOWNLOADER_MIDDLEWARES = {
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     # 'VNNews.pipelines.MySQLPipeline': 1,
-    'VNNews.pipelines.TxtPipeline': 2,
+    # 'VNNews.pipelines.TxtPipeline': 2,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
