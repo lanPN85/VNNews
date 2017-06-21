@@ -53,7 +53,7 @@ ROBOTSTXT_OBEY = True
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
     'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 110,
-    # 'VNNews.middlewares.ProxyMiddleware': 100,
+    'VNNews.middlewares.ProxyMiddleware': 100,
 }
 
 # Enable or disable extensions
