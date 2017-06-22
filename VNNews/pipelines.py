@@ -16,10 +16,10 @@ class FastTextTrainPipeline(object):
 
     def process_item(self, item, spider):
         if item['content'] != '':
-            self.fn.write('\n'.encode('utf-8').join([item['title'],
-                                                     item['intro'],
-                                                     item['content'],
-                                                     ''.encode('utf-8')]))
+            self.fn.write(''.encode('utf-8').join([item['title'],
+                                                   item['intro'],
+                                                   item['content'],
+                                                   '\n'.encode('utf-8')]))
         spider.log('Saved to %s [%d]' % (self.path, item['count']))
         return item
 
