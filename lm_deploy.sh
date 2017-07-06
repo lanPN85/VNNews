@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-rm fastText/*
+rm plain/*
 ./crawl_all.sh
+

@@ -27,6 +27,22 @@ class FastTextTrainPipeline(object):
         self.fn.close()
 
 
+class PlainContentPipeline(object):
+    def open_spider(self, spider):
+        self.path = TemplateSpider.directory + 'plain/vnnews.txt'
+        self.fn = file(self.path, mode='at',
+                       buffering=1)
+
+    def process_item(self, item, spider):
+        if item['content'] != '':
+            self.fn.write(item['content'] + '\n')
+        spider.log('Saved to %s [%d]' % (self.path, item['count']))
+        return item
+
+    def close_spider(self, spider):
+        self.fn.close()
+
+
 class TxtPipeline(object):
     def open_spider(self, spider):
         self.path = TemplateSpider.directory + spider.filename
