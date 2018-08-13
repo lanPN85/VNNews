@@ -9,7 +9,7 @@ import base64
 
 from proxylist import ProxyList
 from scrapy import signals
-from proxy import proxies
+from VNNews.proxy import proxies
 
 
 class VnnewsSpiderMiddleware(object):

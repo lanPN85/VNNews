@@ -18,4 +18,10 @@ class Article(scrapy.Item):
     domain = scrapy.Field()
 
     def __repr__(self):
-        return ''
+        return '''Article(url={url},
+                count={count}, 
+                referer={referer},
+                title={title},
+                domain={domain})'''.format(url=self['url'], count=self['count'],
+                                           referer=self['referer'], title=self['title'].decode('utf-8'),
+                                           domain=self['domain'])

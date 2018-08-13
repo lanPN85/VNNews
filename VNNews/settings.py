@@ -15,7 +15,7 @@ SPIDER_MODULES = ['VNNews.spiders']
 NEWSPIDER_MODULE = 'VNNews.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'LanPN (lanpn@vng.com.vn)'
+USER_AGENT = 'lanpn (lanpn@vng.com.vn)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -53,7 +53,7 @@ ROBOTSTXT_OBEY = True
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
     'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware': 110,
-    'VNNews.middlewares.ProxyMiddleware': 100,
+    # 'VNNews.middlewares.ProxyMiddleware': 100,
 }
 
 # Enable or disable extensions
@@ -65,9 +65,9 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    # 'VNNews.pipelines.TxtPipeline': 2,
+    'VNNews.pipelines.TxtPipeline': 2,
     # 'VNNews.pipelines.FastTextTrainPipeline': 1
-    'VNNews.pipelines.PlainContentPipeline': 3
+    # 'VNNews.pipelines.PlainContentPipeline': 3
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

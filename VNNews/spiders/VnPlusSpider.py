@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import scrapy
 
-from TemplateSpider import TemplateSpider
+from VNNews.spiders.TemplateSpider import TemplateSpider
 
 
 class VnPlusSpider(TemplateSpider):

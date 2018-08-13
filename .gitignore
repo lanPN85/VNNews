@@ -1,6 +1,9 @@
-/files/*
-/VNNews/spiders/*.pyc
-/VNNews/*.pyc
-/VNNews/spiders/*.py~
-/VNNews/*.py~
+**/__pycache__/
+**/*.pyc
 /.idea/
+/venv/
+/fastText/
+/plain/
+/text/
+
+!**/.gitkeep
