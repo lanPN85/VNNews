@@ -52,7 +52,7 @@ class TxtPipeline(object):
             self.fn.write('\n'.join([item['title'].decode('utf-8'),
                                      item['intro'].decode('utf-8'),
                                      item['content'].decode('utf-8'),
-                                     '***\n']))
+                                     '\n']))
         spider.log('Saved to %s [%d]' % (self.path, item['count']))
         return item
 
