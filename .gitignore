@@ -2,9 +2,10 @@
 **/*.pyc
 /.idea/
 /venv/
-/fastText/
-/plain/
-/text/
+/fastText/*
+/plain/*
+/text/*
 /build/
+/project.egg-info/
 
 !**/.gitkeep
